@@ -10,8 +10,4 @@ export default DS.RESTAdapter.extend({
             "useQueryString": true
         };
     }),
-    getWeather(city){
-        const url = `${this.host}/forecast/3hourly`
-        return this.ajax(rul, "GET", {"city": city})
-    }
 })

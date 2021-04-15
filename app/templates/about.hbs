@@ -3,4 +3,8 @@
   <h2>About Weather Analytics!</h2>
   <p>Weather analytics is a app to learn about Ember and using an analytics API</p>
 </main>
-{{list-display list=model}}
+<div class="row">
+  <div class="col-md-12">
+    {{ember-chart type='line' data=model width=500 height=300 legend=true}}
+  </div>
+</div>
