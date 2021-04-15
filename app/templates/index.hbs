@@ -6,4 +6,7 @@
     <button {{action "searchWeatherForecast" city}}>Search Weather Forecast</button>
   </div>
 </main>
+{{#each @model as |3hourly|}}
+<div>{{3hourly}}</div>
+{{/each}}
  

@@ -6,8 +6,9 @@ export default Controller.extend({
     searchWeatherForecast(search) {
       let inputs =['',''];
       inputs = search.split(',').map(inputParam=>(inputParam.trim()));
-      this.store.queryRecord('3hourly', {city:inputs[0], country:inputs[1]}).then(function(data){
-        data.json();
+      let innerThis = this;
+      this.store.queryRecord('3hourly', {city:inputs[0], country:inputs[1]}).then(function(forecast){
+        innerThis.store.push(forecast);
       });
     },
   },
